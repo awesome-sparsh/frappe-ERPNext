@@ -5,6 +5,7 @@ from frappe import _
 @frappe.whitelist(allow_guest=True)
 def fetch_employee_pdf(employee_id):
     try:
+        print("helloooooooo")
         # Fetch employee details from ERPNext
         employee = frappe.get_doc("Employee", {'name':employee_id})
         print(employee)
