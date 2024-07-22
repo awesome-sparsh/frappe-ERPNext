@@ -122,12 +122,19 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+override_doctype_class = {
+    "erpnext.setup.doctype.employee.employee.validate_date": "demo_app.emp_hook.F_one"
+}
+"""
+doc_events = {
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
+# 		"on_trash": "method",
+   "Employee":{
+       "validate":"demo_app.emp_hook.F_one"
+   }
+}"""
 # }
 
 # Scheduled Tasks
